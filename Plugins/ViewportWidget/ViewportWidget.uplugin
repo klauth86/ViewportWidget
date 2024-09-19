@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
 	"Version": 1.0,
-	"VersionName": "1.0",
+	"VersionName": "1.1",
 	"FriendlyName": "Viewport Widget",
 	"Description": "Viewport Widget",
 	"Category": "UI",
@@ -20,7 +20,7 @@
 			"Name": "ViewportWidget",
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
-			"PlatformAllowList": [ "Win64", "Mac" ]
+			"PlatformAllowList": [ "Win64", "Mac", "Linux" ]
 		}
 	]
 }

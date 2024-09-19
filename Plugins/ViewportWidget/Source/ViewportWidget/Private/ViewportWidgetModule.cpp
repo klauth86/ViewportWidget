@@ -329,12 +329,12 @@ bool SViewportWidget::IsVisible() const
 	// caused by the GPU dump being triggered.
 	return
 		ViewportWidget.IsValid() &&
-		LastTickTime == 0.0 ||	// Never been ticked
+		(LastTickTime == 0.0 ||	// Never been ticked
 		FPlatformTime::Seconds() - LastTickTime <= VisibilityTimeThreshold	// Ticked recently
 #if WITH_DUMPGPU
 		|| GDumpGPU_FrameNumber == GFrameNumber	// GPU dump in progress
 #endif		
-		;
+		);
 }
 
 TWeakObjectPtr<AActor> SViewportWidget::GetSpawnedActor(const int32 entryIndex) const
